@@ -1,0 +1,82 @@
+version: 2.1
+
+executors:
+  base:
+    docker:
+      - image: circleci/node:16-browsers
+      - image: postgres:13
+        environment:
+          POSTGRES_HOST_AUTH_METHOD: trust
+jobs:
+  lint:
+      parameters:
+        directory:
+          type: string
+      executor: base
+      steps:
+        - checkout
+        - run: npm -C << parameters.directory >> install
+        - run: npm -C << parameters.directory >> run build --if-present
+        - run: npm -C << parameters.directory >> run lint
+  test:
+    parameters:
+      directory:
+        type: string
+    executor: base
+    steps:
+      - checkout
+      - run: npm -C << parameters.directory >> install
+      - run: npm -C << parameters.directory >> run build --if-present
+      - run:
+          command: npm -C << parameters.directory >> start --if-present
+          background: true
+      - run: npm -C << parameters.directory >> run lint
+      - run: npm -C << parameters.directory >> test
+
+workflows:
+  lint:
+    jobs:
+      - lint:
+          name: database-crud-lint
+          directory: database-crud
+          filters:
+            branches:
+              ignore:
+                - /candidate-.*/
+      - lint:
+          name: fizz-buzz-lint
+          directory: fizz-buzz
+          filters:
+            branches:
+              ignore:
+                - /candidate-.*/
+      - lint:
+          name: swapi-graphql-lint
+          directory: swapi-graphql
+          filters:
+            branches:
+              ignore:
+                - /candidate-.*/
+  test:
+    jobs:
+      - test:
+          name: database-crud
+          directory: database-crud
+          filters:
+            branches:
+              only:
+                - /candidate-.*/
+      - test:
+          name: fizz-buzz
+          directory: fizz-buzz
+          filters:
+            branches:
+              only:
+                - /candidate-.*/
+      - test:
+          name: swapi-graphql
+          directory: swapi-graphql
+          filters:
+            branches:
+              only:
+                - /candidate-.*/

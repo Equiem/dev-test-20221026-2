@@ -1,0 +1,5 @@
+type Mutation {
+  addItem(item: ItemInput!): Item!
+  updateItem(id: Int!, item: ItemInput!): Item!
+  deleteItem(id: Int!): Boolean!
+}

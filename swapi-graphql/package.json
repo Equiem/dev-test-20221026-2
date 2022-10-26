@@ -1,0 +1,55 @@
+{
+  "name": "swapi-graphql",
+  "version": "1.0.0",
+  "description": "SWAPI GraphQL test for Equiem dev candidates",
+  "scripts": {
+    "build": "echo 'Nothing to do yet. (This is run by circleci before starting your app).'",
+    "start": "react-scripts start",
+    "test": "cypress run",
+    "lint": "eslint src --ext js,jsx,ts,tsx && cd cypress && eslint . --ext js,jsx,ts,tsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Equiem/dev-take-home-test-node.git"
+  },
+  "author": "Equiem",
+  "license": "ISC",
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@equiem/eslint-config": "1.2.3",
+    "@equiem/prettier-config": "1.2.0",
+    "@types/node": "16.18.0",
+    "@types/react": "18.0.22",
+    "@types/react-dom": "18.0.7",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
+    "cypress": "10.10.0",
+    "eslint": "7.32.0",
+    "eslint-plugin-deprecation": "1.3.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.31.10",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "prettier": "2.7.1",
+    "typescript": "4.8.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "npm": "^7.24.0"
+  }
+}

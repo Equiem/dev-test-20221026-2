@@ -1,0 +1,24 @@
+overwrite: true
+generates:
+  ./src/schema/types.ts:
+    schema: "./src/schema/graphql/**/*.graphql"
+    config:
+      federation: true
+      contextType: ../Context#Context
+      mappers:
+        Item: ./mappers#ItemMapper
+    plugins:
+      - typescript
+      - typescript-resolvers
+  ./src/schema/schema.graphql:
+    schema: "./src/schema/graphql/**/*.graphql"
+    plugins:
+      - schema-ast
+  ./src/test/test-sdk.ts:
+    schema: "./src/schema/graphql/**/*.graphql"
+    documents:
+      - ./src/**/*.spec.ts
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-graphql-request

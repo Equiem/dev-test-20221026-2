@@ -1,0 +1,23 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.workingDirectories": [
+    {
+      "directory": "database-crud",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "fizz-buzz",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "swapi-graphql",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "swapi-graphql/cypress",
+      "changeProcessCWD": true
+    }
+  ]
+}

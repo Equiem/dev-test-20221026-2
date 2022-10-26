@@ -1,0 +1,4 @@
+/dist
+/src/schema/schema.graphql
+/src/schema/types.ts
+/src/test/test-sdk.ts

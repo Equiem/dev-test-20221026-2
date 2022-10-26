@@ -1,0 +1,4 @@
+type Query {
+  items: [Item!]!
+  item(id: Int!): Item
+}

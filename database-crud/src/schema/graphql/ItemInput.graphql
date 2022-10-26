@@ -1,0 +1,4 @@
+input ItemInput {
+  description: String!
+  done: Boolean!
+}

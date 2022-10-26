@@ -1,0 +1,98 @@
+{
+  "data": {
+    "allPeople": {
+      "edges": [
+        {
+          "node": {
+            "name": "Luke Skywalker",
+            "homeworld": {
+              "name": "Tatooine"
+            },
+            "skinColor": "fair"
+          }
+        },
+        {
+          "node": {
+            "name": "C-3PO",
+            "homeworld": {
+              "name": "Tatooine"
+            },
+            "skinColor": "gold"
+          }
+        },
+        {
+          "node": {
+            "name": "R2-D2",
+            "homeworld": {
+              "name": "Naboo"
+            },
+            "skinColor": "white, blue"
+          }
+        },
+        {
+          "node": {
+            "name": "Darth Vader",
+            "homeworld": {
+              "name": "Tatooine"
+            },
+            "skinColor": "white"
+          }
+        },
+        {
+          "node": {
+            "name": "Leia Organa",
+            "homeworld": {
+              "name": "Alderaan"
+            },
+            "skinColor": "light"
+          }
+        },
+        {
+          "node": {
+            "name": "Owen Lars",
+            "homeworld": {
+              "name": "Tatooine"
+            },
+            "skinColor": "light"
+          }
+        },
+        {
+          "node": {
+            "name": "Beru Whitesun lars",
+            "homeworld": {
+              "name": "Tatooine"
+            },
+            "skinColor": "light"
+          }
+        },
+        {
+          "node": {
+            "name": "R5-D4",
+            "homeworld": {
+              "name": "Tatooine"
+            },
+            "skinColor": "white, red"
+          }
+        },
+        {
+          "node": {
+            "name": "Biggs Darklighter",
+            "homeworld": {
+              "name": "Tatooine"
+            },
+            "skinColor": "light"
+          }
+        },
+        {
+          "node": {
+            "name": "Obi-Wan Kenobi",
+            "homeworld": {
+              "name": "Stewjon"
+            },
+            "skinColor": "fair"
+          }
+        }
+      ]
+    }
+  }
+}
